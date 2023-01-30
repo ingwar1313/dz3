@@ -1,0 +1,12 @@
+{% extends 'base_.html' %}
+
+{% block content %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title"> Номер задания {{ task.pk }}: {{ task.name }} </h4>
+            <h6 class="card-subtitle mb-2 text-muted">Активно (True/False): {{ task.is_active }}</h6>
+            <p class="card-text">Дата создания: {{ task.timestamp_created }}</p>
+            <p class="card-text">Дата закрытия: {{ task.timestamp_closed }}</p>
+        </div>
+    </div>
+{% endblock content %}
